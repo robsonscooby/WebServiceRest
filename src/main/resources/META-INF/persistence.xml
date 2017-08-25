@@ -7,7 +7,7 @@
 								
    <persistence-unit name="persistence_unit_db_estudo" transaction-type="RESOURCE_LOCAL">
       <provider>org.hibernate.ejb.HibernatePersistence</provider>
-	<jta-data-source>java:jboss/datasources/KitchensinkQuickstartDS</jta-data-source>
+	<non-jta-data-source>java:/comp/env/jdbc/MysqlDS</non-jta-data-source>
       <properties>
          <!-- Properties for Hibernate -->
          <property name="hibernate.hbm2ddl.auto" value="create-drop" />
