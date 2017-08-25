@@ -7,11 +7,30 @@
 								
    <persistence-unit name="persistence_unit_db_estudo" transaction-type="RESOURCE_LOCAL">
       <provider>org.hibernate.ejb.HibernatePersistence</provider>
-	<non-jta-data-source>java:/comp/env/jdbc/MysqlDS</non-jta-data-source>
+      	<jta-data-source>java:jboss/datasources/KitchensinkQuickstartDS</jta-data-source>
       <properties>
          <!-- Properties for Hibernate -->
          <property name="hibernate.hbm2ddl.auto" value="create-drop" />
          <property name="hibernate.show_sql" value="false" />
       </properties>
+    <!-- 
+      <properties>
+         <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+         <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+         <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/biblia"/>
+         <property name="javax.persistence.jdbc.user" value="root"/>
+         <property name="javax.persistence.jdbc.password" value=""/>
+         <property name="hibernate.show_sql" value="true"/>
+         <property name="hibernate.format_sql" value="true"/>
+         <property name="hibernate.hbm2ddl.auto" value="update"/>
+         
+         	validate: validar o schema, não faz mudanças no banco de dados.
+			update: faz update o schema.
+			create: cria o schema, destruindo dados anteriores.
+			create-drop: drop o schema quando ao terminar a sessão.
+			<property name="hibernate.hbm2ddl.auto" value="update"/>
+         
+      </properties>
+      -->
    </persistence-unit>
 </persistence>

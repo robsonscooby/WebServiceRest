@@ -144,28 +144,22 @@ public class ServiceController {
 	}
 	
 	/**
-	 * @Consumes - determina o formato dos dados que vamos postar
-	 * @Produces - determina o formato dos dados que vamos retornar
-	 * 
-	 * Esse método cadastra uma nova pessoa
+	 *Metodo para teste
 	 * */
-	@GET	
-	@Consumes("application/json; charset=UTF-8")
+	@GET
 	@Produces("application/json; charset=UTF-8")
-	@Path("/teste")
+	@Path("/teste")	
 	public String teste(){
 		
-		PessoaEntity entity = new PessoaEntity();
-				
 		try {
 			
-			return "Web service funcionando!";
+			return "Servico rest funcionando!";
 			
 		} catch (Exception e) {
-			
-			return "Erro ao cadastrar um registro " + e.getMessage();
+		
+			return "Erro no servico rest! " + e.getMessage();
 		}
-	
+		
 	}
 	
 }

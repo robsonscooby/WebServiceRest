@@ -158,4 +158,24 @@ public class NoticaController {
 		
 	}
 	
+	
+	/**
+	 *Metodo para teste
+	 * */
+	@GET
+	@Produces("application/json; charset=UTF-8")
+	@Path("/teste")	
+	public String teste(){
+		
+		try {
+			
+			return "Servico Noticia rest funcionando!";
+			
+		} catch (Exception e) {
+		
+			return "Erro no Noticia servico rest! " + e.getMessage();
+		}
+		
+	}
+	
 }
