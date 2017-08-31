@@ -12,12 +12,10 @@ import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
-import javax.ws.rs.core.MediaType;
 
 import br.com.celulasreligiosas.http.Noticia;
 import br.com.celulasreligiosas.repository.NoticiaRepository;
 import br.com.celulasreligiosas.repository.entity.NoticiaEntity;
-import br.com.celulasreligiosas.repository.entity.PessoaEntity;
 
 
 /**
@@ -37,8 +35,8 @@ public class NoticaController {
 	 * Esse método cadastra uma nova notica
 	 * */
 	@POST	
-	@Consumes("application/json; charset=UTF-8")
-	@Produces("application/json; charset=UTF-8")
+	@Consumes("application/json")
+	@Produces("application/json")
 	@Path("/cadastrar")
 	public String Cadastrar(Noticia noticia){
 		
@@ -67,8 +65,8 @@ public class NoticaController {
 	 * Essse método altera uma noticia já cadastrada
 	 * **/
 	@PUT
-	@Produces("application/json; charset=UTF-8")
-	@Consumes("application/json; charset=UTF-8")	
+	@Produces("application/json")
+	@Consumes("application/json")	
 	@Path("/alterar")
 	public String Alterar(Noticia noticia){
 		
@@ -98,8 +96,7 @@ public class NoticaController {
 	 * Esse método lista todas noticias cadastradas na base
 	 * */
 	@GET
-	//@Produces("application/json; charset=UTF-8")
-	@Produces(MediaType.MULTIPART_FORM_DATA)
+	@Produces("application/json")
 	@Path("/todasNoticias")
 	public List<Noticia> TodasNoticias(){
 		
@@ -123,7 +120,7 @@ public class NoticaController {
 	 * Esse método busca uma notica cadastrada pelo código
 	 * */
 	@GET
-	@Produces("application/json; charset=UTF-8")
+	@Produces("application/json")
 	@Path("/getNoticia/{codigo}")
 	public Noticia GetNoticia(@PathParam("codigo") Integer codigo){
 		
@@ -144,7 +141,7 @@ public class NoticaController {
 	 * Excluindo uma pessoa pelo código
 	 * */
 	@DELETE
-	@Produces("application/json; charset=UTF-8")
+	@Produces("application/json")
 	@Path("/excluir/{codigo}")	
 	public String Excluir(@PathParam("codigo") Integer codigo){
 		
@@ -168,13 +165,10 @@ public class NoticaController {
 	 * Esse método cadastra uma nova pessoa
 	 * */
 	@GET	
-	@Consumes("application/json; charset=UTF-8")
-	@Produces("application/json; charset=UTF-8")
+	@Consumes("application/json")
+	@Produces("application/json")
 	@Path("/teste")
-	public String teste(){
-		
-		PessoaEntity entity = new PessoaEntity();
-				
+	public String teste(){				
 		try {
 			
 			return "Web service funcionando!";

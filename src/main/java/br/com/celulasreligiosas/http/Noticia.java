@@ -1,11 +1,19 @@
 package br.com.celulasreligiosas.http;
 
 
+import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
-public class Noticia {
+public class Noticia implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 2304498924298837346L;
+	
+	
 	private int codigo;	
 	private String autor;
 	private String titulo;
