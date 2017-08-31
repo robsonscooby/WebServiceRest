@@ -11,20 +11,20 @@ public class Noticia {
 	private String titulo;
 	private String decricao;
 	private String url;
-	//private byte[] foto;
+	private byte[] foto;
 	
 	public Noticia(){
 		
 	}
 	
-	public Noticia(int codigo, String autor, String titulo, String decricao, String url) {
+	public Noticia(int codigo, String autor, String titulo, String decricao, String url, byte[] foto) {
 		super();
 		this.codigo = codigo;
 		this.autor = autor;
 		this.titulo = titulo;
 		this.decricao = decricao;
 		this.url = url;
-		//this.foto = foto; //, byte[] foto
+		this.foto = foto;
 	}
 
 	public int getCodigo() {
@@ -67,12 +67,12 @@ public class Noticia {
 		this.url = url;
 	}
 
-//	public byte[] getFoto() {
-//		return foto;
-//	}
-//
-//	public void setFoto(byte[] foto) {
-//		this.foto = foto;
-//	}
-//	
+	public byte[] getFoto() {
+		return foto;
+	}
+
+	public void setFoto(byte[] foto) {
+		this.foto = foto;
+	}
+	
 }
