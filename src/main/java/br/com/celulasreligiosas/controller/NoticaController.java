@@ -48,7 +48,7 @@ public class NoticaController {
 			entity.setTitulo(noticia.getTitulo());
 			entity.setDecricao(noticia.getDecricao());
 			entity.setUrl(noticia.getUrl());
-			//entity.setFoto(noticia.getFoto());
+			entity.setFoto(noticia.getFoto());
 			
 			repository.Salvar(entity);
 			
@@ -79,7 +79,7 @@ public class NoticaController {
 			entity.setTitulo(noticia.getTitulo());
 			entity.setDecricao(noticia.getDecricao());
 			entity.setUrl(noticia.getUrl());
-			//entity.setFoto(noticia.getFoto());
+			entity.setFoto(noticia.getFoto());
 			
 			repository.Alterar(entity);
 			
@@ -109,8 +109,8 @@ public class NoticaController {
 									 entity.getAutor(),
 									 entity.getTitulo(), 
 									 entity.getDecricao(),
-									 entity.getUrl() //,entity.getFoto()
-									 ));
+									 entity.getUrl(),
+									 entity.getFoto()));
 		}
 		
 		return noticias;
@@ -131,9 +131,8 @@ public class NoticaController {
 							entity.getAutor(),
 							entity.getTitulo(), 
 							entity.getDecricao(),
-							entity.getUrl()
-							//,entity.getFoto()
-							);
+							entity.getUrl(),
+							entity.getFoto());
 		
 		return null;
 	}
