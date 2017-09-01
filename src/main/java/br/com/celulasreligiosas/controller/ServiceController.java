@@ -154,8 +154,6 @@ public class ServiceController {
 	@Produces("application/json; charset=UTF-8")
 	@Path("/teste")
 	public String teste(){
-		
-		PessoaEntity entity = new PessoaEntity();
 				
 		try {
 			
