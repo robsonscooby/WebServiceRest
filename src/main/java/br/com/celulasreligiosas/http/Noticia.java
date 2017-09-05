@@ -19,13 +19,13 @@ public class Noticia implements Serializable{
 	private String titulo;
 	private String decricao;
 	private String url;
-	private String foto;
+	private byte[] foto;
 	
 	public Noticia(){
 		
 	}
 	
-	public Noticia(int codigo, String autor, String titulo, String decricao, String url, String foto) {
+	public Noticia(int codigo, String autor, String titulo, String decricao, String url, byte[] foto) {
 		super();
 		this.codigo = codigo;
 		this.autor = autor;
@@ -75,11 +75,11 @@ public class Noticia implements Serializable{
 		this.url = url;
 	}
 
-	public String getFoto() {
+	public byte[] getFoto() {
 		return foto;
 	}
 
-	public void setFoto(String foto) {
+	public void setFoto(byte[] foto) {
 		this.foto = foto;
 	}
 	
