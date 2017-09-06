@@ -5,8 +5,6 @@ import java.io.Serializable;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-import com.mysql.jdbc.Blob;
-
 @XmlRootElement
 public class Noticia implements Serializable{
 
@@ -21,13 +19,13 @@ public class Noticia implements Serializable{
 	private String titulo;
 	private String decricao;
 	private String url;
-	private Blob foto;
+	private String foto;
 	
 	public Noticia(){
 		
 	}
 	
-	public Noticia(int codigo, String autor, String titulo, String decricao, String url, Blob foto) {
+	public Noticia(int codigo, String autor, String titulo, String decricao, String url, String foto) {
 		super();
 		this.codigo = codigo;
 		this.autor = autor;
@@ -77,11 +75,11 @@ public class Noticia implements Serializable{
 		this.url = url;
 	}
 
-	public Blob getFoto() {
+	public String getFoto() {
 		return foto;
 	}
 
-	public void setFoto(Blob foto) {
+	public void setFoto(String foto) {
 		this.foto = foto;
 	}
 	

@@ -7,8 +7,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.mysql.jdbc.Blob;
-
 @Entity
 @Table(name="tb_noticia")
 public class NoticiaEntity {
@@ -31,7 +29,7 @@ public class NoticiaEntity {
 	private String url;
 	
 	@Column(name="foto")
-	private Blob foto;
+	private String foto;
 
 	public Integer getCodigo() {
 		return codigo;
@@ -73,11 +71,11 @@ public class NoticiaEntity {
 		this.url = url;
 	}
 
-	public Blob getFoto() {
+	public String getFoto() {
 		return foto;
 	}
 
-	public void setFoto(Blob foto) {
+	public void setFoto(String foto) {
 		this.foto = foto;
 	}
 		
