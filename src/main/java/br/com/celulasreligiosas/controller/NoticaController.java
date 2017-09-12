@@ -35,8 +35,8 @@ public class NoticaController {
 	 * Esse método cadastra uma nova notica
 	 * */
 	@POST	
-	@Consumes("application/json")
-	@Produces("application/json")
+	@Consumes("application/json; charset=UTF-8")
+	@Produces("application/json; charset=UTF-8")
 	@Path("/cadastrar")
 	public String Cadastrar(Noticia noticia){
 		
@@ -65,8 +65,8 @@ public class NoticaController {
 	 * Essse método altera uma noticia já cadastrada
 	 * **/
 	@PUT
-	@Produces("application/json")
-	@Consumes("application/json")	
+	@Produces("application/json; charset=UTF-8")
+	@Consumes("application/json; charset=UTF-8")	
 	@Path("/alterar")
 	public String Alterar(Noticia noticia){
 		
@@ -96,7 +96,7 @@ public class NoticaController {
 	 * Esse método lista todas noticias cadastradas na base
 	 * */
 	@GET
-	@Produces("application/json")
+	@Produces("application/json; charset=UTF-8")
 	@Path("/todasNoticias")
 	public List<Noticia> TodasNoticias(){
 		
@@ -109,8 +109,7 @@ public class NoticaController {
 									 entity.getAutor(),
 									 entity.getTitulo(), 
 									 entity.getDecricao(),
-									 entity.getUrl()
-									 //,entity.getFoto()
+									 entity.getUrl() //,entity.getFoto()
 									 ));
 		}
 		
@@ -121,7 +120,7 @@ public class NoticaController {
 	 * Esse método busca uma notica cadastrada pelo código
 	 * */
 	@GET
-	@Produces("application/json")
+	@Produces("application/json; charset=UTF-8")
 	@Path("/getNoticia/{codigo}")
 	public Noticia GetNoticia(@PathParam("codigo") Integer codigo){
 		
@@ -132,8 +131,7 @@ public class NoticaController {
 							entity.getAutor(),
 							entity.getTitulo(), 
 							entity.getDecricao(),
-							entity.getUrl()
-							//,entity.getFoto()
+							entity.getUrl() //, entity.getFoto()
 							);
 		
 		return null;
@@ -143,7 +141,7 @@ public class NoticaController {
 	 * Excluindo uma pessoa pelo código
 	 * */
 	@DELETE
-	@Produces("application/json")
+	@Produces("application/json; charset=UTF-8")
 	@Path("/excluir/{codigo}")	
 	public String Excluir(@PathParam("codigo") Integer codigo){
 		
@@ -158,28 +156,6 @@ public class NoticaController {
 			return "Erro ao excluir o registro! " + e.getMessage();
 		}
 		
-	}
-	
-	/**
-	 * @Consumes - determina o formato dos dados que vamos postar
-	 * @Produces - determina o formato dos dados que vamos retornar
-	 * 
-	 * Esse método cadastra uma nova pessoa
-	 * */
-	@GET	
-	@Consumes("application/json")
-	@Produces("application/json")
-	@Path("/teste")
-	public String teste(){				
-		try {
-			
-			return "Web service funcionando!";
-			
-		} catch (Exception e) {
-			
-			return "Erro ao cadastrar um registro " + e.getMessage();
-		}
-	
 	}
 	
 }

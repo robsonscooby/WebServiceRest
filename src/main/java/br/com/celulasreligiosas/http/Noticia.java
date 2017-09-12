@@ -1,26 +1,17 @@
 package br.com.celulasreligiosas.http;
 
 
-import java.io.Serializable;
-
 import javax.xml.bind.annotation.XmlRootElement;
 
-@SuppressWarnings("restriction")
 @XmlRootElement
-public class Noticia implements Serializable{
+public class Noticia {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 2304498924298837346L;
-	
-	
 	private int codigo;	
 	private String autor;
 	private String titulo;
 	private String decricao;
 	private String url;
-	//private String foto;
+	//private byte[] foto;
 	
 	public Noticia(){
 		
@@ -33,7 +24,7 @@ public class Noticia implements Serializable{
 		this.titulo = titulo;
 		this.decricao = decricao;
 		this.url = url;
-		//this.foto = foto;
+		//this.foto = foto; //, byte[] foto
 	}
 
 	public int getCodigo() {
@@ -76,12 +67,12 @@ public class Noticia implements Serializable{
 		this.url = url;
 	}
 
-//	public String getFoto() {
+//	public byte[] getFoto() {
 //		return foto;
 //	}
 //
-//	public void setFoto(String foto) {
+//	public void setFoto(byte[] foto) {
 //		this.foto = foto;
 //	}
-	
+//	
 }

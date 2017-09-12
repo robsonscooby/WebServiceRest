@@ -29,7 +29,7 @@ public class NoticiaEntity {
 	private String url;
 	
 //	@Column(name="foto")
-//	private String foto;
+//	private byte[] foto;
 
 	public Integer getCodigo() {
 		return codigo;
@@ -71,11 +71,11 @@ public class NoticiaEntity {
 		this.url = url;
 	}
 
-//	public String getFoto() {
+//	public byte[] getFoto() {
 //		return foto;
 //	}
 //
-//	public void setFoto(String foto) {
+//	public void setFoto(byte[] foto) {
 //		this.foto = foto;
 //	}
 		

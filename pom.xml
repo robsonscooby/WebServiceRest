@@ -18,7 +18,7 @@
   </repositories>
   
   <properties>
-    <jersey.version>2.25.1</jersey.version>
+    <jersey.version>2.22.1</jersey.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
  </properties>
 
@@ -38,7 +38,7 @@
     <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>servlet-api</artifactId>
-        <version>2.5</version>
+        <version>2.4</version>
     </dependency>
 
     <dependency>
@@ -71,35 +71,35 @@
 	<dependency>
    		<groupId>org.hibernate</groupId>
    		<artifactId>hibernate-core</artifactId>
-   		<version>5.2.10.Final</version>
+   		<version>5.1.0.Final</version>
 	</dependency>
 	
 	<dependency>
 		<groupId>org.hibernate</groupId>
 		<artifactId>hibernate-entitymanager</artifactId>
-		<version>5.2.10.Final</version>
+		<version>5.1.0.Final</version>
 	</dependency>
 	
             
     <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.41</version>
+            <version>5.1.37</version>
     </dependency>
         
   </dependencies>
   
- <build>
-    <finalName>getting-started-tomcat</finalName>
-      <plugins>
-          <plugin>
-              <artifactId>maven-war-plugin</artifactId>
-              <version>2.6</version>
-              <configuration>
-                  <warName>ROOT</warName>
-              </configuration>
-          </plugin>
-      </plugins>
-  </build>
+  <build>  
+		<finalName>WebServiceRest</finalName>   
+	    <plugins>
+	       <plugin>
+	           <artifactId>maven-compiler-plugin</artifactId>
+	           <configuration>
+	               <source>1.8</source>
+	               <target>1.8</target>
+	           </configuration>
+	       </plugin>
+	   </plugins>    
+	</build>
   
 </project>
