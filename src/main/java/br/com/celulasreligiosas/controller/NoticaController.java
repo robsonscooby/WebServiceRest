@@ -110,7 +110,8 @@ public class NoticaController {
 									 entity.getAutor(),
 									 entity.getTitulo(), 
 									 entity.getDecricao(),
-									 entity.getUrl() //,entity.getFoto()
+									 entity.getUrl()
+									 , entity.getFoto()
 									 ));
 		}
 		
@@ -132,7 +133,7 @@ public class NoticaController {
 							entity.getAutor(),
 							entity.getTitulo(), 
 							entity.getDecricao(),
-							entity.getUrl() //, entity.getFoto()
+							entity.getUrl(), entity.getFoto()
 							);
 		
 		return null;
@@ -170,8 +171,6 @@ public class NoticaController {
 	@Produces("application/json; charset=UTF-8")
 	@Path("/teste")
 	public String teste(){
-		
-		PessoaEntity entity = new PessoaEntity();
 				
 		try {
 			

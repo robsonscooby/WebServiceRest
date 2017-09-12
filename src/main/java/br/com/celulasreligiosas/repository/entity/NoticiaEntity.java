@@ -28,8 +28,8 @@ public class NoticiaEntity {
 	@Column(name="url")
 	private String url;
 	
-//	@Column(name="foto")
-//	private byte[] foto;
+	@Column(name="foto")
+	private byte[] foto;
 
 	public Integer getCodigo() {
 		return codigo;
@@ -71,12 +71,12 @@ public class NoticiaEntity {
 		this.url = url;
 	}
 
-//	public byte[] getFoto() {
-//		return foto;
-//	}
-//
-//	public void setFoto(byte[] foto) {
-//		this.foto = foto;
-//	}
+	public byte[] getFoto() {
+		return foto;
+	}
+
+	public void setFoto(byte[] foto) {
+		this.foto = foto;
+	}
 		
 }
