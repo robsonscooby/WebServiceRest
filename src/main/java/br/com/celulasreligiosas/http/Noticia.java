@@ -5,6 +5,7 @@ import java.io.Serializable;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+@SuppressWarnings("restriction")
 @XmlRootElement
 public class Noticia implements Serializable{
 
@@ -19,20 +20,20 @@ public class Noticia implements Serializable{
 	private String titulo;
 	private String decricao;
 	private String url;
-	private String foto;
+	//private String foto;
 	
 	public Noticia(){
 		
 	}
 	
-	public Noticia(int codigo, String autor, String titulo, String decricao, String url, String foto) {
+	public Noticia(int codigo, String autor, String titulo, String decricao, String url) {
 		super();
 		this.codigo = codigo;
 		this.autor = autor;
 		this.titulo = titulo;
 		this.decricao = decricao;
 		this.url = url;
-		this.foto = foto;
+		//this.foto = foto;
 	}
 
 	public int getCodigo() {
@@ -75,12 +76,12 @@ public class Noticia implements Serializable{
 		this.url = url;
 	}
 
-	public String getFoto() {
-		return foto;
-	}
-
-	public void setFoto(String foto) {
-		this.foto = foto;
-	}
+//	public String getFoto() {
+//		return foto;
+//	}
+//
+//	public void setFoto(String foto) {
+//		this.foto = foto;
+//	}
 	
 }
