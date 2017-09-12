@@ -16,6 +16,7 @@ import javax.ws.rs.Produces;
 import br.com.celulasreligiosas.http.Noticia;
 import br.com.celulasreligiosas.repository.NoticiaRepository;
 import br.com.celulasreligiosas.repository.entity.NoticiaEntity;
+import br.com.celulasreligiosas.repository.entity.PessoaEntity;
 
 
 /**
@@ -156,6 +157,31 @@ public class NoticaController {
 			return "Erro ao excluir o registro! " + e.getMessage();
 		}
 		
+	}
+	
+	/**
+	 * @Consumes - determina o formato dos dados que vamos postar
+	 * @Produces - determina o formato dos dados que vamos retornar
+	 * 
+	 * Esse método cadastra uma nova pessoa
+	 * */
+	@GET	
+	@Consumes("application/json; charset=UTF-8")
+	@Produces("application/json; charset=UTF-8")
+	@Path("/teste")
+	public String teste(){
+		
+		PessoaEntity entity = new PessoaEntity();
+				
+		try {
+			
+			return "Web service funcionando!";
+			
+		} catch (Exception e) {
+			
+			return "Erro ao cadastrar um registro " + e.getMessage();
+		}
+	
 	}
 	
 }

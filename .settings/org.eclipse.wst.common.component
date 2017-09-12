@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
     <wb-module deploy-name="WebServiceRest">
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
@@ -10,3 +11,17 @@
         <property name="java-output-path" value="/WebServiceRest/target/classes"/>
     </wb-module>
 </project-modules>
+=======
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="WebServiceRest">
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/java"/>
+        <property name="context-root" value="WebServiceRest"/>
+        <property name="java-output-path" value="/WebServiceRest/target/classes"/>
+    </wb-module>
+</project-modules>
+>>>>>>> c1f071d19340d250e2d269702cac3f77033a8e69
