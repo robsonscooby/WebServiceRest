@@ -16,7 +16,6 @@ import javax.ws.rs.Produces;
 import br.com.celulasreligiosas.http.Noticia;
 import br.com.celulasreligiosas.repository.NoticiaRepository;
 import br.com.celulasreligiosas.repository.entity.NoticiaEntity;
-import br.com.celulasreligiosas.repository.entity.PessoaEntity;
 
 
 /**

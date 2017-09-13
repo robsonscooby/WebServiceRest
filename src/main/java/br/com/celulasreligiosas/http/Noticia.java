@@ -11,13 +11,13 @@ public class Noticia {
 	private String titulo;
 	private String decricao;
 	private String url;
-	private byte[] foto;
+	private String foto;
 	
 	public Noticia(){
 		
 	}
 	
-	public Noticia(int codigo, String autor, String titulo, String decricao, String url, byte[] foto) {
+	public Noticia(int codigo, String autor, String titulo, String decricao, String url, String foto) {
 		super();
 		this.codigo = codigo;
 		this.autor = autor;
@@ -67,11 +67,11 @@ public class Noticia {
 		this.url = url;
 	}
 
-	public byte[] getFoto() {
+	public String getFoto() {
 		return foto;
 	}
 
-	public void setFoto(byte[] foto) {
+	public void setFoto(String foto) {
 		this.foto = foto;
 	}
 	
